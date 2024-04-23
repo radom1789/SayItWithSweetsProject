@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <script defer src="../static/script.js"></script>
+     <!-- This is for icons -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+     <!-- This is google map API -->
+     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+     <!-- This is for jQuery -->
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Say it with Sweets'</title>
+</head>
+<body onload="footerYear()">
+    <div class="top-colored-strip">
+        <p class="top-strip-text">Call or Email: (814) 937 1564 | <a href="mailto:info@sayitwithsweets.com">info@sayitwithsweets.com</a></p>
+    </div>
+    <header>
+        <div class="header">
+            <div class = "logo_name">
+                <a href="index.html">
+                    <img src="../static/logo.png" alt="Say it with Sweets' logo image">
+                </a>
+                <h1 id="webname">Say it with Sweets'</h1>
+            </div>
+            <div class = "navi">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="subscribe.html">Subscribe</a>
+                <a href="menu.html">Menu</a>
+                <div class = "search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Search</p>
+                </div>    
+                <button id="signUpBtn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    <!-- Image carousel cited from W3Schools https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img class="carousel-img" src="../static/cakes/cakes5.jpg" alt="cakes5 image">
+        <div class="text">All cake orders of over $35 get 15% off</div>
+        </div>
+    
+        <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img class="carousel-img" src="../static/cookies/cookies2.jpg" alt="cookies2 image">
+        <div class="text">All cookie orders of over $40 get 10% off</div>
+        </div>
+    
+        <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img class="carousel-img" src="../static/cupcake_bouquets/cupcake_bouquets5.jpg" alt="cupcake_bouquet5 image">
+        <div class="text">All cupcake bouquet orders of over $40 get 10% off</div>
+        </div>
+    
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- End of code taken from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <div class="hr_line">
+        <hr>
+    </div>
+    <div class="content_menu">
+        <h1>Menu</h1>
+        <h2>Explore our cakes, cookies, cupcakes, and more!</h2>
+        <!-- Referenced from (format) https://jqueryui.com/tabs/ -->
+        <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Cupcake Bouquets</a></li>
+              <li><a href="#tabs-2">Cookies</a></li>
+              <li><a href="#tabs-3">Cakes</a></li>
+              <li><a href="#tabs-4">Cupcakes</a></li>
+              <li><a href="#tabs-5">Cookie Trays</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div class = "item">
+                    <img src="../static/cupcake_bouquets/cupcake_bouquets1.jpg" alt="cupcake_bouquets1 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cupcake_bouquets/cupcake_bouquets2.jpg" alt="cupcake_bouquets2 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cupcake_bouquets/cupcake_bouquets3.jpg" alt="cupcake_bouquets3 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cupcake_bouquets/cupcake_bouquets4.jpg" alt="cupcake_bouquets4 image">
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div class = "item">
+                    <img src="../static/cookies/cookies1.jpg" alt="cookies1 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cookies/cookies3.jpg" alt="cookies3 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cookies/cookies4.jpg" alt="cookies4 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cookies/cookies5.jpg" alt="cookies5 image">
+                </div>
+            </div>
+            <div id="tabs-3">
+                <div class = "item">
+                    <img src="../static/cakes/cakes1.jpg" alt="cakes1 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cakes/cakes2.jpg" alt="cakes2 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cakes/cakes3.jpg" alt="cakes3 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cakes/cakes4.jpg" alt="cakes4 image">
+                </div>
+            </div>
+            <div id="tabs-4">
+                <div class = "item">
+                    <img src="../static/cupcakes/cupcakes2.jpg" alt="cupcakes2 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cupcakes/cupcakes3.jpg" alt="cupcakes3 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cupcakes/cupcakes4.jpg" alt="cupcakes4 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cupcakes/cupcakes5.jpg" alt="cupcakes5 image">
+                </div>
+            </div>
+            <div id="tabs-5">
+                <div class = "item">
+                    <img src="../static/cookie_trays/cookie_trays1.jpg" alt="cookie_trays1 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cookie_trays/cookie_trays2.jpg" alt="cookie_trays2 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cookie_trays/cookie_trays3.jpg" alt="cookie_trays3 image">
+                </div>
+                <div class = "item">
+                    <img src="../static/cookie_trays/cookie_trays4.jpg" alt="cookie_trays4 image">
+                </div>
+            </div>
+          </div>
+          <!-- End of referenced code (format) from https://jqueryui.com/tabs/ -->
+        <h2 id="text_above_hr">Call (814) 937 1564 to order and prepay with credit card. No walk-ins at the moment.</h2>
+        <div class="hr_line">
+            <hr>
+        </div>
+    </div>
+    <footer>
+        <div class="bottom-colored-strip">
+            <div class = "footer_info">
+                <div class="footer_info_section_location">
+                    <h3 class="footer_heading">Location</h3>
+                    <p class="footer_info_text"><span><i class="fa-solid fa-location-dot"></i></span> 1307 Pleasant Valley Blvd, Altoona, PA 16602</p>
+                </div>
+                <div class="footer_info_section_social">
+                    <h3 class="footer_heading">Social Media</h3>
+                    <p class="footer_info_text">Follow us!</p>
+                    <a href="https://www.facebook.com/say.it.with.sweets/"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sayitwithsweets11/"> <i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://www.wearesweets.com/home.html"> <i class="fa-solid fa-globe"></i></a>
+                </div>
+                <div class="footer_info_section_mailing">
+                    <h3 class="footer_heading">Join Our Mailing List</h3>
+                    <p class="footer_info_text">Join our mailing list never miss out on new items & deals!</p>
+                    <div class="button_joins">
+                        <button id="enter_email">Enter email</button>
+                        <button id="join">Join</button>
+                    </div>
+                </div>
+            </div>
+            <p id="rights"> Say it with Sweets' all rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

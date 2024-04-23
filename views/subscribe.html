@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <script defer src="../static/script.js"></script>
+     <!-- This is for icons -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+     <!-- This is google map API -->
+     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+     <!-- This is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Say it with Sweets'</title>
+</head>
+<body onload="footerYear()">
+    <div class="top-colored-strip">
+        <p class="top-strip-text">Call or Email: (814) 937 1564 | <a href="mailto:info@sayitwithsweets.com">info@sayitwithsweets.com</a></p>
+    </div>
+    <header>
+        <div class="header">
+            <div class = "logo_name">
+                <a href="index.html">
+                    <img src="../static/logo.png" alt="Say it with Sweets' logo image">
+                </a>
+                <h1 id="webname">Say it with Sweets'</h1>
+            </div>
+            <div class = "navi">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="subscribe.html">Subscribe</a>
+                <a href="menu.html">Menu</a>
+                <div class = "search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Search</p>
+                </div>    
+                <button id="signUpBtn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    <div class="content_subscribe">
+        <div class="images_form">
+            <img src="../static/cupcakes/cupcakes1.jpg" alt="cupcakes1 image">
+            <div class="form">
+                <h1>Join Our Mailing List</h1>
+                <form action="mailto: info@sayitwithsweets.com">
+                    <div class="subject_lines">
+                        <label for="yourName"> Name (required):</label>
+                        <input type="text" name="yourName" id="yourName" required/>
+                        <label for="yourEmail"> Email (required):</label>
+                        <input type="email" name="yourEmail" id="yourEmail" required/>
+                        <label for="yourNumber"> Number (optional):</label>
+                        <input type="number" name="yourNumber" id="yourNumber"/>
+                        <label for="zipCode"> Zip code (optional):</label>
+                        <input type="text" name="zipCode" id="zipCode" pattern="[0-9]{5}"/>
+                        <div class="checkbox">
+                            <input type="checkbox" id="receiveCheckbox" name="receiveMsg">
+                            <label for="receiveMsg" id="receiveMsg">I want to receive messages via SMS text</label>  
+                        </div>
+                        <input type="submit" value="Submit" onclick="validate()"/>
+                    </div>
+                </form> 
+                <p id="ValidateComment"></p>
+            </div>
+            <img src="../static/cupcakes/cupcakes1.jpg" alt="cupcakes1 image">
+        </div>
+        
+    </div>
+    <footer>
+        <div class="bottom-colored-strip">
+            <div class = "footer_info">
+                <div class="footer_info_section_location">
+                    <h3 class="footer_heading">Location</h3>
+                    <p class="footer_info_text"><span><i class="fa-solid fa-location-dot"></i></span> 1307 Pleasant Valley Blvd, Altoona, PA 16602</p>
+                </div>
+                <div class="footer_info_section_social">
+                    <h3 class="footer_heading">Social Media</h3>
+                    <p class="footer_info_text">Follow us!</p>
+                    <a href="https://www.facebook.com/say.it.with.sweets/"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sayitwithsweets11/"> <i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://www.wearesweets.com/home.html"> <i class="fa-solid fa-globe"></i></a>
+                </div>
+                <div class="footer_info_section_mailing">
+                    <h3 class="footer_heading">Join Our Mailing List</h3>
+                    <p class="footer_info_text">Join our mailing list never miss out on new items & deals!</p>
+                    <div class="button_joins">
+                        <button id="enter_email">Enter email</button>
+                        <button id="join">Join</button>
+                    </div>
+                </div>
+            </div>
+            <p id="rights"> Say it with Sweets' all rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
